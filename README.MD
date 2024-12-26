@@ -20,10 +20,8 @@ This repository contains the backend implementation for handling contact form su
 - **dotenv**: For environment variable management.
 - **bcrypt**: For secure password hashing.
 - **jsonwebtoken**: For JWT-based authentication.
-- **Docker**: For development and deployment.
 
 ## Development Plan
 - [x] Seed database with admin initial data.
 - [x] Implement JWT-based authentication.
-- [ ] Add API endpoint for retrieving contact submissions.
-- [ ] Dockerize the application for deployment.
+- [x] Add API endpoint for retrieving contact submissions.
