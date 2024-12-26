@@ -11,10 +11,25 @@ pub async fn initialize_database(db_pool: &PgPool) {
     );
     "#;
 
+    let create_contacts_table_query = r#"
+    CREATE TABLE IF NOT EXISTS contacts (
+        id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+        name VARCHAR(255) NOT NULL,
+        email VARCHAR(255) NOT NULL,
+        phone VARCHAR(20),
+        message TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+    "#;
+
     db_pool
         .execute(create_table_query)
         .await
         .expect("Failed to initialize database");
+    db_pool
+        .execute(create_contacts_table_query)
+        .await
+        .expect("Failed to initialize contacts table"); // Add this line
 }
 
 pub async fn seed_admin(db_pool: &PgPool) -> Result<String, sqlx::Error> {
