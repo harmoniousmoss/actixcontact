@@ -195,6 +195,7 @@ dependencies = [
  "chrono",
  "dotenv",
  "jsonwebtoken",
+ "regex",
  "serde",
  "serde_json",
  "sqlx",
