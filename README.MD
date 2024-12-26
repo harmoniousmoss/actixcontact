@@ -16,5 +16,8 @@ This repository contains the backend implementation for handling contact form su
 - **Rust**: Programming language for backend development.
 - **Actix Web**: Web framework for building efficient APIs.
 - **PostgreSQL**: Relational database for data storage.
-- **Diesel ORM**: For database interaction.
-- **Docker**: Optional containerization for development and deployment.
+- **SQLx**: Async, compile-time verified ORM for database interaction.
+- **dotenv**: For environment variable management.
+- **bcrypt**: For secure password hashing.
+- **jsonwebtoken**: For JWT-based authentication.
+- **Docker**: For development and deployment.
